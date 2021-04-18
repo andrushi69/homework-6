@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework-5</title>
+    <title>Homework-6</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -64,7 +64,78 @@
         </div>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <a href="" data-modal-close class="close"></a>
+            <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
+            <a href="" data-modal-close class="close"> </a>
+
+            <form class="form">
+              <div class="modal-inputs">
+                <label for="name" class="form-label">Имя</label>
+
+                <input
+                  type="text"
+                  class="form-input"
+                  name="name"
+                  pattern="^[А-Яа-яЁё\s]+$"
+                />
+                <svg class="modal-icons">
+                  <use
+                    href="./svg/modal-icons.svg#icon-person-black-18dp-1"
+                  ></use>
+                </svg>
+              </div>
+              <div class="modal-inputs">
+                <label for="phone" class="form-label">Телефон</label>
+
+                <input
+                  type="text"
+                  class="form-input"
+                  name="phone"
+                  pattern="[0-9]{10,12}"
+                />
+                <svg class="modal-icons-2">
+                  <use
+                    href="./svg/modal-icons.svg#icon-phone-black-18dp-1"
+                  ></use>
+                </svg>
+              </div>
+              <div class="modal-inputs">
+                <label for="email" class="form-label">Почта</label>
+
+                <input
+                  type="text"
+                  name="email"
+                  class="form-input"
+                  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                />
+                <svg class="modal-icons-3">
+                  <use
+                    href="./svg/modal-icons.svg#icon-email-black-18dp-1"
+                  ></use>
+                </svg>
+              </div>
+              <div class="modal-inputs">
+                <label for="coment" class="form-label">Коментарий</label>
+
+                <textarea
+                  name="coment"
+                  class="textarea"
+                  placeholder="Введите текст"
+                  id=""
+                  cols="25"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="checkbox">
+                <label class="check">
+                <input class="input-check" type="checkbox" />
+                
+                <span class="check-box"></span>
+                 Соглашаюсь с рассылкой и принимаю
+                <span class="check-span">Условия договора</span>
+              </label>
+              </div>
+              <button type="submit">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
@@ -119,7 +190,7 @@
                 alt="человек пишет коды"
               />
               <div class="label">
-                <p class="label-title">Десктопные приложения </p>
+                <p class="label-title">Десктопные приложения</p>
               </div>
             </li>
 
@@ -528,6 +599,24 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="subscribe">
+            <p class="footer-title-2">Подпишитесь на рассылку</p>
+            <form class="form-footer">
+              <label class="label-footer" for="name">
+                <input
+                  type="email"
+                  name="email"
+                  id="name"
+                  placeholder="E-mail"
+                  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                />
+                <button class="submit-button" type="submit">
+                  Подписаться
+                  <span class="svg-subcribe"> </span>
+                </button>
+              </label>
+            </form>
           </div>
         </address>
       </div>
