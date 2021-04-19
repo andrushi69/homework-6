@@ -254,6 +254,7 @@ img {
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -273,21 +274,27 @@ img {
 }
 .close {
   position: absolute;
-  background-image: url(../images-svg/vector.svg);
-  top: 17px;
-  right: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.close:hover .close-svg,
+.close:focus .close-svg {
+  fill: #2196f3;
+}
+.close-svg {
   width: 11px;
   height: 11px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition-property: background-image;
+  fill: black;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.close:hover,
-.close:focus {
-  background-image: url(../images-svg/vector-hover.svg);
 }
 .modal-title {
   font-family: Roboto;
@@ -907,6 +914,19 @@ img {
   margin-top: 12px;
   margin-bottom: 20px;
 }
+.footer-title-3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
 .main-links {
   display: flex;
 }
@@ -947,21 +967,25 @@ img {
 }
 .subscribe {
   margin-left: 93px;
-  width: 49%;
+  width: 50%;
 }
 .main-last-section input {
-  width: 100%;
-  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
+  color: white;
+  padding-left: 16px;
+  outline: none;
+  width: 100%;
 }
 .label-footer {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 .form-footer {
+  display: flex;
+  justify-content: space-between;
 }
 .submit-button {
   padding: 10px 28px;
